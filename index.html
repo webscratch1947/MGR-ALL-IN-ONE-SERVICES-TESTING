@@ -1,0 +1,2480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>MGR ALL IN ONE SERVICES</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="shortcut icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <!-- ORGANIZATION LOGO FOR GOOGLE -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "MGR All In One Services",
+    "url": "https://www.mgrallinoneservices.com",
+    "logo": "https://www.mgrallinoneservices.com/favicon.png"
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #0a66ff;
+      --dark: #1b1b1b;
+      --light: #f5f7fb;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: var(--light);
+      color: var(--dark);
+    }
+
+    /* ================= NAVBAR ================= */
+
+    .navbar {
+      width: 100%;
+      background: #ffffff;
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+      position: relative;
+      /* NOT STICKY */
+      z-index: 100;
+    }
+
+    /* LEFT SIDE */
+    .navbar-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* LOGO IMAGE */
+    .navbar-logo {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    /* TEXT WRAPPER */
+    .navbar-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    /* MGR TEXT */
+    .navbar-text .title {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: var(--dark);
+    }
+
+    /* SUBTITLE */
+    .navbar-text .subtitle {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: var(--primary);
+      margin-top: 2px;
+    }
+
+    /* ================= TABLET ================= */
+
+    @media (max-width: 1024px) {
+      .navbar {
+        padding: 16px 28px;
+      }
+
+      .navbar-logo {
+        width: 52px;
+        height: 52px;
+      }
+
+      .navbar-text .title {
+        font-size: 24px;
+      }
+
+      .navbar-text .subtitle {
+        font-size: 12px;
+      }
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 16px 18px;
+      }
+
+      .navbar-left {
+        gap: 14px;
+      }
+
+      /* BIGGER LOGO ON MOBILE */
+      .navbar-logo {
+        width: 64px;
+        height: 64px;
+      }
+
+      .navbar-text .title {
+        font-size: 24px;
+        font-weight: 900;
+        text-align: left;
+      }
+
+      .navbar-text .subtitle {
+        font-size: 12px;
+        font-weight: 700;
+      }
+    }
+
+    /* ================= SMALL PHONES ================= */
+
+    @media (max-width: 480px) {
+      .navbar-logo {
+        width: 68px;
+        height: 68px;
+      }
+
+      .navbar-text .title {
+        font-size: 23px;
+      }
+
+      .navbar-text .subtitle {
+        font-size: 11px;
+      }
+    }
+
+
+    /* ================= HERO ================= */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 40px;
+      padding: 60px 40px;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-left h1 {
+      font-size: 42px;
+      margin-bottom: 16px;
+    }
+
+    .hero-left h1 span {
+      color: var(--primary);
+    }
+
+    .desc {
+      max-width: 520px;
+      line-height: 1.7;
+      margin-bottom: 22px;
+    }
+
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 26px;
+    }
+
+    .cta-btn {
+      background: var(--primary);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      width: fit-content;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .cta-btn:hover {
+      background: #0052cc;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(10, 102, 255, 0.2);
+    }
+
+    .hero-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-grid {
+      width: 520px;
+      height: 520px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 10px;
+      overflow: hidden;
+      border-radius: 24px;
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .image-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    /* ================= WHY CHOOSE US - REDESIGNED ================= */
+    .why-choose {
+      padding: 80px 40px;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .why-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .why-header h2 {
+      font-size: 36px;
+      margin-bottom: 12px;
+      color: var(--dark);
+      position: relative;
+      display: inline-block;
+    }
+
+    .why-header h2:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    .why-sub {
+      font-size: 18px;
+      color: #666;
+      max-width: 700px;
+      margin: 20px auto 0;
+      line-height: 1.6;
+    }
+
+    .why-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .why-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 35px 25px;
+      text-align: center;
+      transition: all 0.4s ease;
+      border: 2px solid transparent;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .why-card:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--primary);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .why-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(10, 102, 255, 0.15);
+      border-color: rgba(10, 102, 255, 0.2);
+    }
+
+    .why-card:hover:before {
+      opacity: 1;
+    }
+
+    .why-icon {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      background: rgba(10, 102, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: var(--primary);
+      transition: all 0.4s ease;
+    }
+
+    .why-card:hover .why-icon {
+      background: var(--primary);
+      color: #fff;
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .why-card h4 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: var(--dark);
+    }
+
+    .why-card p {
+      color: #666;
+      line-height: 1.6;
+      font-size: 15px;
+      max-width: 250px;
+      margin: 0 auto;
+    }
+
+    .why-highlight {
+      background: linear-gradient(135deg, var(--primary) 0%, #0052cc 100%);
+      color: white;
+      padding: 40px;
+      border-radius: 20px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 0 15px 35px rgba(10, 102, 255, 0.2);
+    }
+
+    .highlight-content h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: white;
+      line-height: 1.3;
+    }
+
+    .highlight-content p {
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.7;
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    /* New stats style - small boxes in a line */
+    .highlight-stats {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .stat-item {
+      flex: 1;
+      min-width: 100px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      padding: 15px 10px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .stat-item:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateY(-3px);
+    }
+
+    .stat-item h4 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: white;
+    }
+
+    .stat-item p {
+      font-size: 14px;
+      opacity: 0.9;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.95);
+    }
+
+    /* ================= SERVICES SECTION ================= */
+
+    .services-section {
+      padding: 80px 40px;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .services-section h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 50px;
+      color: var(--dark);
+      position: relative;
+    }
+
+    .services-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    /* ================= DESKTOP GRID ================= */
+
+    .services-grid-desktop {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 24px;
+    }
+
+    /* ================= ROOT ================= */
+
+    :root {
+      --primary: #0a66ff;
+      --dark: #1b1b1b;
+      --light: #f5f7fb;
+    }
+
+    /* ================= GLOBAL RESET ================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: var(--light);
+      color: var(--dark);
+    }
+
+    /* ================= OUR POPULAR SERVICES - FIXED ================= */
+    .services-section {
+      padding: 80px 40px;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .services-section h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 50px;
+      position: relative;
+    }
+
+    .services-section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    /* ================= SLIDER CONTAINER ================= */
+    .services-slider {
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 10px 10px 30px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .services-slider::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* ================= SERVICE CARD - DESKTOP ================= */
+    .service-card {
+      flex: 0 0 300px;
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+    }
+
+    /* IMAGE - PERFECT SIZING FOR DESKTOP */
+    .service-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+    }
+
+    /* TITLE */
+    .service-card h4 {
+      font-size: 18px;
+      font-weight: 700;
+      padding: 20px 15px;
+      text-align: center;
+      margin: 0;
+      background: var(--light);
+      color: var(--dark);
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ================= TABLET ================= */
+    @media (max-width: 1024px) {
+      .service-card {
+        flex: 0 0 280px;
+      }
+
+      .service-card img {
+        height: 280px;
+      }
+    }
+
+    /* ================= MOBILE (768px and below) - FIXED ================= */
+    @media (max-width: 768px) {
+      .services-section {
+        padding: 60px 20px;
+      }
+
+      .services-section h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+      }
+
+      .services-slider {
+        gap: 15px;
+        padding: 10px 5px 30px;
+      }
+
+      .service-card {
+        flex: 0 0 92%;
+        /* Wide but not full width */
+        border-radius: 18px;
+        min-height: 380px;
+        /* Reduced from 450px */
+      }
+
+      /* PERFECT IMAGE SIZE FOR MOBILE - NOT TOO BIG, NOT TOO SMALL */
+      .service-card img {
+        height: 280px;
+        /* Reduced from 400px - Perfect size! */
+        min-height: 280px;
+        object-fit: cover;
+        /* This keeps aspect ratio */
+        object-position: center center;
+        /* Shows center, not cut off */
+      }
+
+      .service-card h4 {
+        font-size: 18px;
+        /* Slightly smaller */
+        padding: 20px 15px;
+        /* Good padding */
+        min-height: 70px;
+        /* Good height */
+        font-weight: 700;
+      }
+    }
+
+    /* ================= SMALL PHONES (480px and below) - FIXED ================= */
+    @media (max-width: 480px) {
+      .services-section {
+        padding: 50px 15px;
+      }
+
+      .services-section h2 {
+        font-size: 28px;
+      }
+
+      .services-slider {
+        gap: 12px;
+        padding: 10px 0 30px;
+      }
+
+      .service-card {
+        flex: 0 0 94%;
+        min-height: 350px;
+        /* Reduced from 480px */
+      }
+
+      /* GOOD IMAGE SIZE FOR SMALL PHONES */
+      .service-card img {
+        height: 240px;
+        /* Reduced from 420px - Much better! */
+        min-height: 240px;
+        object-fit: cover;
+        object-position: center center;
+      }
+
+      .service-card h4 {
+        font-size: 17px;
+        padding: 18px 12px;
+        min-height: 65px;
+      }
+    }
+
+    /* ================= EXTRA SMALL PHONES (360px and below) ================= */
+    @media (max-width: 360px) {
+      .service-card {
+        flex: 0 0 95%;
+        min-height: 320px;
+        /* Reduced from 500px */
+      }
+
+      .service-card img {
+        height: 220px;
+        /* Reduced from 440px */
+        min-height: 220px;
+      }
+
+      .service-card h4 {
+        font-size: 16px;
+        padding: 16px 10px;
+      }
+    }
+
+    /* ================= ENHANCED OUR APP ================= */
+    .our-app {
+      padding: 80px 40px;
+      max-width: 1400px;
+      margin: auto;
+      background: linear-gradient(135deg, #0a66ff 0%, #0052cc 100%);
+      border-radius: 20px;
+      color: white;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .app-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .app-phone {
+      width: 300px;
+      height: 600px;
+      background: #000;
+      border-radius: 40px;
+      padding: 14px;
+      margin: 0 auto;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    .app-screen {
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      border-radius: 30px;
+      overflow: hidden;
+    }
+
+    .app-screen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .app-content h2 {
+      font-size: 32px;
+      margin-bottom: 16px;
+      color: white;
+    }
+
+    .app-content p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 24px;
+      max-width: 600px;
+    }
+
+    .app-features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .app-feature {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 14px 16px;
+      border-radius: 16px;
+      font-weight: 600;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .app-feature:before {
+      content: "✓";
+      color: #4CAF50;
+      font-weight: bold;
+    }
+
+    .download-btn {
+      display: inline-block;
+      background: white;
+      color: var(--primary);
+      padding: 14px 34px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background: #f5f5f5;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .playstore-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .playstore-icon {
+      width: 26px;
+      height: 26px;
+      flex-shrink: 0;
+    }
+
+    /* Mobile slightly smaller */
+    @media (max-width: 768px) {
+      .playstore-icon {
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+
+    /* ================= FOOTER ================= */
+    .footer {
+      background: #222;
+      color: white;
+      padding: 40px 40px 20px;
+      margin-top: 60px;
+    }
+
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+
+    .footer-logo {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .footer-logo h3 {
+      font-size: 22px;
+      color: white;
+      margin-bottom: 5px;
+    }
+
+    .footer-logo p {
+      color: #aaa;
+      line-height: 1.6;
+      font-size: 14px;
+      max-width: 400px;
+    }
+
+    .footer-links {
+      text-align: right;
+    }
+
+    .footer-links h3 {
+      font-size: 18px;
+      margin-bottom: 25px;
+      color: white;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+      color: #aaa;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      padding: 10px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-item:hover {
+      color: white;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-item .icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    .contact-item span {
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .footer-bottom {
+      max-width: 1400px;
+      margin: 30px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      color: #888;
+      font-size: 13px;
+    }
+
+    /* ================= RESPONSIVE ================= */
+    @media(max-width:1200px) {
+      .why-container {
+        gap: 30px;
+      }
+
+      .services-grid-desktop {
+        grid-template-columns: repeat(3, minmax(220px, 1fr));
+        gap: 25px;
+      }
+
+      /* Center Electrician on tablet (3 columns) */
+      .services-grid-desktop .service-card:nth-child(5) {
+        grid-column: 2 / 3;
+        /* Middle of 3 columns */
+      }
+
+      .image-grid {
+        width: 100%;
+        height: 400px;
+      }
+
+      .footer-content {
+        gap: 60px;
+      }
+    }
+
+    @media(max-width:1024px) {
+      .why-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .services-grid-desktop {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        gap: 20px;
+      }
+
+      /* Center Electrician on smaller tablets (2 columns) */
+      .services-grid-desktop .service-card:nth-child(5) {
+        grid-column: 1 / 3;
+        /* Span full width to center */
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .service-card {
+        min-height: 220px;
+      }
+
+      .service-card img {
+        height: 160px;
+      }
+
+      .service-card h4 {
+        font-size: 14px;
+        min-height: 35px !important;
+      }
+    }
+
+    /* ================= MOBILE VIEW ================= */
+    @media(max-width:768px) {
+      .navbar {
+        padding: 14px 20px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      .hero-left {
+        align-items: center;
+        text-align: center;
+      }
+
+      .cta-btn {
+        margin: 0 auto;
+        display: block;
+        width: fit-content;
+      }
+
+      .hero-right {
+        display: none;
+      }
+
+      .app-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+      }
+
+      .app-features {
+        grid-template-columns: 1fr;
+      }
+
+      .app-phone {
+        margin: 0 auto 30px;
+        width: 280px;
+        height: 560px;
+      }
+
+      /* Services Section for Mobile */
+      .services-section {
+        padding: 60px 20px;
+      }
+
+      .services-section h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+      }
+
+      /* Hide desktop grid on mobile */
+      .services-grid-desktop {
+        display: none;
+      }
+
+      /* Show mobile container on mobile */
+      .services-mobile-container {
+        display: block;
+      }
+
+      /* Horizontal scrolling grid for ALL services */
+      .mobile-services-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 15px;
+        padding: 10px 10px 20px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Firefox */
+      }
+
+      /* Hide scrollbar */
+      .mobile-services-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Mobile service cards - BIGGER IMAGES */
+      .mobile-services-grid .service-card {
+        flex: 0 0 85% !important;
+        max-width: 85% !important;
+        scroll-snap-align: start;
+        min-height: 280px;
+        /* Increased height for bigger images */
+        border-radius: 16px;
+        margin: 5px 10px;
+      }
+
+      /* BIGGER IMAGES FOR MOBILE */
+      .mobile-services-grid .service-card img {
+        height: 200px !important;
+        /* Increased from 180px */
+      }
+
+      /* VERY SMALL TEXT AREA FOR MOBILE */
+      .mobile-services-grid .service-card h4 {
+        font-size: 15px !important;
+        padding: 8px 5px !important;
+        min-height: 40px !important;
+        line-height: 1.3;
+        height: 40px;
+        overflow: hidden;
+      }
+
+      /* Why Choose Us adjustments for mobile */
+      .why-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .why-grid {
+        order: 1;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .why-highlight {
+        order: 2;
+        padding: 30px 25px;
+      }
+
+      .highlight-stats {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .stat-item {
+        min-width: auto;
+        flex: 1;
+        padding: 12px 8px;
+      }
+
+      .stat-item h4 {
+        font-size: 20px;
+      }
+
+      .stat-item p {
+        font-size: 13px;
+      }
+
+      .our-app {
+        padding: 50px 20px;
+      }
+
+      .footer {
+        padding: 30px 20px 15px;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .footer-links {
+        text-align: left;
+      }
+
+      .contact-item {
+        justify-content: flex-start;
+      }
+
+      .why-header h2,
+      .services-section h2 {
+        font-size: 28px;
+      }
+
+      .why-sub {
+        font-size: 16px;
+      }
+    }
+
+    @media(max-width:480px) {
+      .hero-left h1 {
+        font-size: 32px;
+      }
+
+      /* Mobile cards for small screens */
+      .mobile-services-grid .service-card {
+        flex: 0 0 90% !important;
+        max-width: 90% !important;
+        min-height: 260px;
+        margin: 5px;
+      }
+
+      /* Bigger images for very small screens */
+      .mobile-services-grid .service-card img {
+        height: 180px !important;
+        /* Increased from 160px */
+      }
+
+      .mobile-services-grid .service-card h4 {
+        font-size: 14px !important;
+        padding: 6px 4px !important;
+        min-height: 35px !important;
+      }
+
+      .app-phone {
+        width: 250px;
+        height: 500px;
+      }
+
+      .app-content h2 {
+        font-size: 28px;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .why-card {
+        padding: 25px 20px;
+      }
+
+      .why-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+      }
+
+      .why-highlight {
+        padding: 25px 20px;
+      }
+
+      .highlight-content h3 {
+        font-size: 24px;
+      }
+
+      .highlight-stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .stat-item {
+        min-width: 100px;
+        margin: 5px;
+        padding: 10px 5px;
+      }
+
+      .stat-item h4 {
+        font-size: 18px;
+      }
+
+      .stat-item p {
+        font-size: 12px;
+      }
+    }
+
+    /* Additional fix for very large screens */
+    @media(min-width: 1600px) {
+      .services-grid-desktop {
+        grid-template-columns: repeat(4, minmax(240px, 1fr));
+        justify-content: center;
+      }
+
+      .service-card img {
+        height: 200px;
+      }
+
+      .service-card {
+        min-height: 260px;
+      }
+    }
+
+    /* ================= YOUTUBE SECTION ================= */
+    .youtube-section {
+      padding: 70px 20px;
+      background: transparent;
+      /* NO BLACK BACKGROUND */
+    }
+
+    .youtube-container {
+      max-width: 1200px;
+      /* BIGGER ON PC */
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* VIDEO WRAPPER */
+    .youtube-video {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      /* 16:9 ASPECT RATIO */
+      border-radius: 22px;
+      overflow: hidden;
+      background: #000;
+      /* only behind video while loading */
+      transform: translateZ(0);
+      /* GPU FIX */
+    }
+
+    /* IFRAME */
+    .youtube-video iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* YOUTUBE BUTTON */
+    .youtube-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 28px;
+      background: #ff0000;
+      color: #ffffff;
+      padding: 15px 36px;
+      font-size: 17px;
+      font-weight: 700;
+      border-radius: 40px;
+      text-decoration: none;
+      box-shadow: 0 12px 30px rgba(255, 0, 0, 0.35);
+      transition: all 0.3s ease;
+    }
+
+    .youtube-btn:hover {
+      background: #cc0000;
+      transform: translateY(-3px);
+      box-shadow: 0 18px 40px rgba(255, 0, 0, 0.55);
+    }
+
+    /* ================= DESKTOP ONLY ================= */
+    @media (min-width: 1024px) {
+      .youtube-section {
+        padding: 90px 40px;
+      }
+
+      .youtube-video {
+        border-radius: 26px;
+      }
+    }
+
+    /* ================= MOBILE ONLY ================= */
+    @media (max-width: 768px) {
+      .youtube-section {
+        padding: 50px 16px;
+      }
+
+      .youtube-btn {
+        font-size: 15px;
+        padding: 13px 28px;
+      }
+    }
+
+    /* ================= FOOTER ================= */
+    .footer {
+      background: #1f1f1f;
+      color: #ffffff;
+      padding: 40px 40px 20px;
+      margin-top: 60px;
+    }
+
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+
+    /* ================= LEFT SIDE ================= */
+    .footer-logo h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .footer-logo p {
+      font-size: 14px;
+      color: #cfcfcf;
+      line-height: 1.6;
+      max-width: 420px;
+    }
+
+    /* ================= SOCIAL ICONS ================= */
+    .footer-socials {
+      display: flex;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .footer-socials a {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-socials svg {
+      width: 22px;
+      height: 22px;
+      fill: #ffffff;
+    }
+
+
+    /* FACEBOOK */
+    .social-facebook {
+      background: #1877f2;
+      /* Official Facebook Blue */
+      color: #fff;
+    }
+
+    /* Brand colors (ALWAYS visible) */
+    .social-youtube {
+      background: #ff0000;
+    }
+
+    .social-instagram {
+      background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+    }
+
+    .social-linkedin {
+      background: #0077b5;
+    }
+
+    .social-twitter {
+      background: #000000;
+    }
+
+    /* ================= RIGHT SIDE ================= */
+    .footer-links {
+      text-align: right;
+    }
+
+    .footer-links h3 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    /* ================= CONTACT BOXES ================= */
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .contact-info a,
+    .contact-info div {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 12px 14px;
+      border-radius: 10px;
+      color: #e0e0e0;
+      font-size: 14px;
+      line-height: 1.6;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    /* Hover for clickable items */
+    .contact-info a:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* Address line spacing */
+    .contact-info a br,
+    .contact-info div br {
+      line-height: 1.8;
+    }
+
+    /* ================= FOOTER BOTTOM ================= */
+    .footer-bottom {
+      max-width: 1400px;
+      margin: 30px auto 0;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      text-align: center;
+      font-size: 13px;
+      color: #aaaaaa;
+    }
+
+    /* ================= MOBILE ================= */
+    @media (max-width: 768px) {
+      .footer {
+        padding: 30px 20px 15px;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .footer-links {
+        text-align: left;
+      }
+
+      .footer-socials {
+        margin-bottom: 10px;
+      }
+    }
+
+    /* ================= SPLASH SCREEN ================= */
+    #splash {
+      position: fixed;
+      inset: 0;
+      background: #ffffff;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: splashFadeOut 0.8s ease forwards;
+      animation-delay: 2s;
+    }
+
+    /* CENTER CONTENT */
+    .splash-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: splashIn 0.8s ease forwards;
+    }
+
+    /* BIG LOGO */
+    .splash-logo {
+      width: 320px;
+      /* DESKTOP BIG */
+      max-width: 90vw;
+      height: auto;
+    }
+
+    /* ENTRY ANIMATION */
+    @keyframes splashIn {
+      from {
+        opacity: 0;
+        transform: scale(0.85);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* EXIT ANIMATION */
+    @keyframes splashFadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .splash-logo {
+        width: 360px;
+        /* BIGGER ON MOBILE */
+      }
+    }
+
+    /* SMALL PHONES */
+    @media (max-width: 480px) {
+      .splash-logo {
+        width: 380px;
+        /* DOMINANT */
+      }
+    }
+
+    /* ================= REVIEWS SECTION ================= */
+
+    .reviews-section {
+      padding: 70px 20px;
+      background: #f7f9fc;
+      text-align: center;
+    }
+
+    .reviews-title {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    /* ================= CAROUSEL ================= */
+
+    .reviews-carousel {
+      position: relative;
+      max-width: 1100px;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .reviews-track {
+      display: flex;
+      gap: 24px;
+      transition: transform 0.5s ease;
+    }
+
+    /* ================= REVIEWS SECTION ================= */
+
+    .reviews-section {
+      padding: 80px 20px;
+      background: #f7f9fc;
+      overflow: hidden;
+    }
+
+    .reviews-section h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 50px;
+      position: relative;
+    }
+
+    .reviews-section h2::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: #0b5cff;
+      display: block;
+      margin: 12px auto 0;
+      border-radius: 2px;
+    }
+
+    /* ================= SLIDER WRAPPER ================= */
+
+    .review-slider-wrapper {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .review-slider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      transition: transform 0.6s ease;
+      will-change: transform;
+    }
+
+    /* ================= REVIEWS SECTION ================= */
+
+    .reviews-section {
+      padding: 90px 40px;
+      background: #f7f9fc;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .reviews-section h2 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 60px;
+      position: relative;
+    }
+
+    .reviews-section h2::after {
+      content: "";
+      width: 70px;
+      height: 4px;
+      background: #1e6bff;
+      display: block;
+      margin: 14px auto 0;
+      border-radius: 2px;
+    }
+
+    /* ================= SLIDER ================= */
+
+    .reviews-slider {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .reviews-track {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      transition: transform 0.6s ease;
+      will-change: transform;
+    }
+
+    /* ================= SECTION ================= */
+
+    .reviews-3d {
+      padding: 120px 20px;
+      background: radial-gradient(circle at top, #1b0033, #050008 70%);
+      text-align: center;
+      perspective: 1400px;
+      overflow: hidden;
+    }
+
+    .reviews-3d h2 {
+      color: #fff;
+      font-size: 38px;
+      margin-bottom: 90px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ================= LAYOUT ================= */
+
+    .boards {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 80px;
+      flex-wrap: wrap;
+    }
+
+    /* ================= BOARD BASE ================= */
+
+    .review-board {
+      width: 360px;
+      height: 260px;
+      background: linear-gradient(145deg, #0d001a, #16002e);
+      border-radius: 24px;
+      padding: 36px;
+      box-shadow:
+        0 0 40px rgba(138, 43, 226, 0.25),
+        inset 0 0 25px rgba(255, 255, 255, 0.05);
+      transform-style: preserve-3d;
+      transition: transform 0.8s ease, box-shadow 0.8s ease;
+      position: relative;
+    }
+
+    /* ================= TEXT ================= */
+
+    .review-board h3 {
+      color: #fff;
+      font-size: 22px;
+      margin-bottom: 16px;
+      transition: text-shadow 0.6s ease;
+    }
+
+    .review-board p {
+      color: #cfc3ff;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 26px;
+      transition: text-shadow 0.6s ease;
+    }
+
+    .review-board a {
+      display: inline-block;
+      padding: 10px 22px;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #7f00ff, #e100ff);
+      color: #fff;
+      font-size: 14px;
+      text-decoration: none;
+      box-shadow: 0 0 15px rgba(225, 0, 255, 0.6);
+    }
+
+    /* ================= INITIAL 3D POSITIONS ================= */
+
+    .review-board.left {
+      transform: rotateY(25deg) translateZ(-40px);
+    }
+
+    .review-board.center {
+      transform: translateZ(40px);
+    }
+
+    .review-board.right {
+      transform: rotateY(-25deg) translateZ(-40px);
+    }
+
+    /* ================= HOVER MAGIC ================= */
+
+    .review-board:hover {
+      transform: rotateY(0deg) rotateX(10deg) translateZ(80px);
+      box-shadow:
+        0 0 80px rgba(180, 80, 255, 0.7),
+        inset 0 0 30px rgba(255, 255, 255, 0.08);
+    }
+
+    .review-board:hover h3,
+    .review-board:hover p {
+      text-shadow:
+        0 0 8px rgba(190, 90, 255, 0.9),
+        0 0 16px rgba(190, 90, 255, 0.7);
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 900px) {
+      .boards {
+        gap: 60px;
+      }
+
+      .review-board {
+        width: 92%;
+        max-width: 420px;
+        transform: none !important;
+      }
+
+      .review-board:hover {
+        transform: rotateX(8deg) translateZ(50px);
+      }
+    }
+
+    /* ================= INTRO VIDEO ================= */
+
+    #intro-video-wrapper {
+      position: fixed;
+      inset: 0;
+      background: #000;
+      z-index: 999999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .intro-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+    }
+
+    .desktop-video {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .desktop-video {
+        display: none;
+      }
+
+      .mobile-video {
+        display: block;
+      }
+    }
+
+    #intro-video-wrapper.fade-out {
+      animation: introFadeOut 0.9s ease forwards;
+      pointer-events: none;
+    }
+
+    @keyframes introFadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    /* ADDRESS BOX */
+    .address-box {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 14px;
+      border-radius: 12px;
+      line-height: 1.6;
+      color: #e0e0e0;
+    }
+
+    /* ADDRESS TEXT */
+    .address-text {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    /* MAP BUTTON */
+    .map-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #0a66ff;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 22px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 6px 18px rgba(10, 102, 255, 0.35);
+    }
+
+    .map-btn:hover {
+      background: #0052cc;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 26px rgba(10, 102, 255, 0.45);
+    }
+
+    /* ================= MOBILE ONLY ADDRESS BUTTON FIX ================= */
+    @media (max-width: 768px) {
+
+      .address-box {
+        text-align: center;
+        /* center content only on mobile */
+      }
+
+      .map-btn {
+        display: inline-flex;
+        margin: 10px auto 0;
+        /* center button */
+        background: #22c55e;
+        /* GREEN (trust / maps vibe) */
+        box-shadow: 0 6px 18px rgba(34, 197, 94, 0.35);
+      }
+
+      .map-btn:hover {
+        background: #16a34a;
+        box-shadow: 0 10px 26px rgba(34, 197, 94, 0.45);
+      }
+    }
+
+    /* ================= SCROLL TO TOP BUTTON (FIXED) ================= */
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+
+      background: var(--primary);
+      color: #fff;
+      border: none;
+
+      display: none;
+      /* controlled by JS */
+      align-items: center;
+      justify-content: center;
+
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1;
+
+      cursor: pointer;
+      z-index: 999;
+
+      box-shadow: 0 10px 25px rgba(10, 102, 255, 0.35);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #scrollTopBtn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 35px rgba(10, 102, 255, 0.5);
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      #scrollTopBtn {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+        bottom: 18px;
+        right: 18px;
+      }
+    }
+
+    #scrollTopBtn .arrow {
+      display: block;
+      transform: translateY(-1px);
+      /* MICRO FIX */
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-left">
+      <img src="favicon.png" class="navbar-logo">
+      <div class="navbar-text">
+        <div class="title">MGR</div>
+        <div class="subtitle">ALL IN ONE SERVICES</div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= INTRO VIDEO (PC + MOBILE) ================= -->
+  <div id="intro-video-wrapper">
+
+    <!-- DESKTOP VIDEO -->
+    <video id="introVideoDesktop" class="intro-video desktop-video" autoplay muted playsinline preload="auto">
+      <source src="MGR ALL IN ONE SERVICES WEBSITE INTRO.mp4" type="video/mp4">
+    </video>
+
+    <!-- MOBILE VIDEO -->
+    <video id="introVideoMobile" class="intro-video mobile-video" autoplay muted playsinline preload="auto">
+      <source src="MGR ALL IN ONE SERVICES WEBSITE MOBILE INTRO.mp4" type="video/mp4">
+    </video>
+
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <h1>Professional Services<br><span>Done Right, Every Time</span></h1>
+      <p class="desc">Get access to trained professionals with 3+ years of experience.</p>
+
+      <div class="features">
+        <div>✔ Verified & Skilled Professionals</div>
+        <div>✔ 30+ Home & Commercial Services</div>
+        <div>✔ On-Time & Quality Guaranteed</div>
+      </div>
+
+      <a href="https://play.google.com/store/apps/details?id=com.MGR.MGR&hl=en" target="_blank" class="cta-btn">
+        Book a Service
+      </a>
+
+    </div>
+
+    <div class="hero-right">
+      <div class="image-grid">
+        <img src="lucid-origin_image_of_a_Caucasian_male_plumber_with_a_strong_jawline_and_worn_hands_wearing_a-0.jpg">
+        <img src="lucid-origin_image_of_a_skilled_carpenter_with_a_rugged_complexion_and_worn_hands_wearing_a_p-0.jpg">
+        <img src="lucid-origin_image_of_a_skilled_electrician_with_a_focused_expression_wearing_a_yellow_hard_h-0.jpg">
+        <img src="image copy.png">
+      </div>
+    </div>
+  </section>
+
+  <!-- REDESIGNED WHY CHOOSE US -->
+  <section class="why-choose">
+    <div class="why-header">
+      <h2>Why Choose Us</h2>
+      <p class="why-sub">Few Reasons to Choose Our Company</p>
+    </div>
+
+    <div class="why-container">
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">✓</div>
+          <h4>Verified Professionals</h4>
+          <p>Background-checked and trained servicemen with proven expertise.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">🛠</div>
+          <h4>3+ Years Experience</h4>
+          <p>Skilled professionals with real-world expertise and hands-on knowledge.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">₹</div>
+          <h4>Low Cost, High Quality</h4>
+          <p>Affordable pricing without compromising on service quality or materials.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">📞</div>
+          <h4>24/7 Support</h4>
+          <p>Round-the-clock customer support and service availability whenever you need.</p>
+        </div>
+      </div>
+
+      <div class="why-highlight">
+        <div class="highlight-content">
+          <h3>Your Satisfaction is Our Priority</h3>
+          <p>Choose us for unmatched expertise, exceptional quality, timely service, and a commitment to transforming
+            your space with excellence. We guarantee professional service that exceeds expectations every time.</p>
+
+          <div class="highlight-stats">
+            <div class="stat-item">
+              <h4>30+</h4>
+              <p>Services</p>
+            </div>
+            <div class="stat-item">
+              <h4>100%</h4>
+              <p>Quality</p>
+            </div>
+            <div class="stat-item">
+              <h4>24/7</h4>
+              <p>Support</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-section">
+    <section class="services-section">
+      <h2>Our Popular Services</h2>
+
+      <!-- SLIDER (USED FOR BOTH PC & MOBILE) -->
+      <div class="services-slider">
+        <div class="service-card">
+          <img src="image copy 2.png">
+          <h4>House Keeping</h4>
+        </div>
+
+        <div class="service-card">
+          <img src="image copy 8.png">
+          <h4>Electrician</h4>
+        </div>
+
+        <div class="service-card">
+          <img
+            src="lucid-origin_image_of_a_skilled_beautician_with_a_pleasant_smile_and_gentle_hands_standing_in-0.jpg">
+          <h4>Beautician</h4>
+        </div>
+
+        <div class="service-card">
+          <img src="image copy 4.png">
+          <h4>Plumber</h4>
+        </div>
+
+        <div class="service-card">
+          <img
+            src="lucid-origin_image_of_a_skilled_carpenter_with_a_rugged_complexion_and_worn_hands_wearing_a_p-0.jpg">
+          <h4>Carpenter</h4>
+        </div>
+
+        <div class="service-card">
+          <img src="image copy.png">
+          <h4>AC Repair</h4>
+        </div>
+
+        <div class="service-card">
+          <img src="image copy 3.png">
+          <h4>Pest Control</h4>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="youtube-section">
+      <div class="youtube-container">
+
+        <div class="youtube-video">
+          <iframe src="Taxi Booking   MGR ALL IN ONE SERVICES.mp4" title="YouTube video" frameborder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          </iframe>
+        </div>
+
+        <a href="https://youtube.com/@mgrallinoneservicesproviders?si=GoA9exZoPkYru537" target="_blank"
+          class="youtube-btn">
+          ▶ Our YouTube Channel
+        </a>
+
+      </div>
+    </section>
+
+
+    </div>
+  </section>
+
+  <section class="reviews-3d">
+    <h2>What Our Customers Say</h2>
+
+    <div class="boards">
+
+      <div class="review-board left">
+        <h3>Pradeep Singh Bais</h3>
+        <p>
+          MGR ALL IN ONE SERVICES IS GOOD COMPANY WHICH IS PROVIDE REAL TRUSTWORTHY WORK,
+          I'M FULL SATISFIED 👍
+        </p>
+        <a href="https://share.google/EFLriNjBvmJQWXb5S">View Review</a>
+      </div>
+
+      <div class="review-board center">
+        <h3>Kumar Shanu Gupta</h3>
+        <p>
+          Excellent service
+        </p>
+        <a href="https://share.google/B5ythIhYoUGYRXByl">View Review</a>
+      </div>
+
+      <div class="review-board right">
+        <h3>Shashank Shekhar</h3>
+        <p>
+          It's very nice service.. solution of all house hold requirements in one place
+        </p>
+        <a href="https://share.google/YNyY219bViDmpNX9f">View Review</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ENHANCED OUR APP -->
+  <section class="our-app">
+    <div class="app-wrapper">
+      <div class="app-phone">
+        <div class="app-screen">
+          <img src="WhatsApp Image 2025-12-22 at 2.20.24 PM (1).jpeg">
+        </div>
+      </div>
+
+      <div class="app-content">
+        <h2>Download Our App</h2>
+        <p>
+          Book trusted professionals instantly with the MGR All In One Services app.
+          Enjoy low-cost services, easy booking, and 24/7 instant customer support
+          across 30+ home and commercial services.
+        </p>
+
+        <div class="app-features">
+          <div class="app-feature">24/7 Support</div>
+          <div class="app-feature">Instant Booking</div>
+          <div class="app-feature">Low Cost</div>
+          <div class="app-feature">30+ Services</div>
+          <div class="app-feature">Easy to Use</div>
+          <div class="app-feature">Verified Experts</div>
+        </div>
+
+        <a href="https://play.google.com/store/apps/details?id=com.MGR.MGR&hl=en" target="_blank"
+          style="display:inline-block;">
+          <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+            alt="Get it on Google Play" style="height:60px; width:auto;">
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+
+      <!-- LEFT SIDE -->
+      <div class="footer-logo">
+        <h3>MGR ALL IN ONE SERVICES</h3>
+        <p>
+          Professional home and commercial services with verified experts.
+          Quality service guaranteed.
+        </p>
+
+        <!-- SOCIAL MEDIA LOGOS -->
+        <div class="footer-socials">
+
+          <!-- YouTube -->
+          <a href="https://youtube.com/@mgrallinoneservicesproviders" target="_blank" class="social-youtube"
+            aria-label="YouTube">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M23.5 6.2s-.2-1.7-.9-2.4c-.9-.9-1.9-.9-2.4-1C16.8 2.5 12 2.5 12 2.5s-4.8 0-8.2.3c-.4.1-1.4.1-2.4 1C.7 4.5.5 6.2.5 6.2S.2 8.1.2 10v1.9c0 1.9.3 3.8.3 3.8s.2 1.7.9 2.4c.9.9 2.1.9 2.6 1 1.9.2 8 .3 8 .3s4.8 0 8.2-.3c.4-.1 1.4-.1 2.4-1 .7-.7.9-2.4.9-2.4s.3-1.9.3-3.8V10c0-1.9-.3-3.8-.3-3.8zM9.8 13.9V7.8l6.2 3.1-6.2 3z" />
+            </svg>
+          </a>
+
+          <!-- Instagram (FIXED) -->
+          <a href="https://www.instagram.com/mgrallinoneservices/" target="_blank" class="social-instagram"
+            aria-label="Instagram">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H7c-1.65 0-3-1.35-3-3V7c0-1.65 1.35-3 3-3h10zm-5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm5.5-.9a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2z" />
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/mgr-all-in-one-service-22b0a02bb/" target="_blank"
+            class="social-linkedin" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 21h4V9H3v12zM9 9h4v1.7h.1c.6-1.1 2.1-2.2 4.3-2.2 4.6 0 5.6 3 5.6 6.9V21h-4v-5.2c0-1.3 0-3-1.9-3s-2.1 1.5-2.1 2.9V21H9z" />
+            </svg>
+          </a>
+
+          <!-- Twitter / X -->
+          <a href="https://x.com/Harithamgr" target="_blank" class="social-twitter" aria-label="X (Twitter)">
+            <svg viewBox="0 0 24 24">
+              <path d="M18.2 2.2h3.3l-7.3 8.3L22.5 21.8h-6.5l-5.1-6.6-6.2 6.6H1.4l7.9-8.9-7.6-10h6.6l4.6 6 5.3-6z" />
+            </svg>
+          </a>
+
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/profile.php?id=61555012423918" target="_blank" class="social-facebook"
+            aria-label="Facebook">
+            <svg viewBox="0 0 24 24">
+              <path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9
+             1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 2.9h-2.4v7A10
+             10 0 0 0 22 12z" />
+            </svg>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="footer-links">
+        <h3>Contact Us</h3>
+
+        <div class="contact-info">
+          <a href="tel:+919866303104">📞 +91 9866 303 104 - Booking Service</a>
+          <a href="tel:+918500810055">📞 +91 8500 8100 55 - Help Center</a>
+          <a href="tel:+918500820055">📞 +91 8500 8200 55 - Feedback / Complaints</a>
+          <a href="https://wa.me/919866303104" target="_blank">💬 WhatsApp Chat</a>
+          <a href="mailto:mgrallinoneservices@gmail.com">✉️ mgrallinoneservices@gmail.com</a>
+
+          <div class="address-box">
+            <div class="address-text">
+              NEAR SATYA INTERNATIONAL HOTEL,<br>
+              Opposite Of Ola Showroom,<br>
+              WAIDHAN, SINGRAULI,<br>
+              MADHYA PRADESH – 486886
+            </div>
+
+            <a href="https://www.google.com/maps/search/?api=1&query=MGR+ALL+IN+ONE+SERVICES+OFFICE+WAIDHAN+SINGRAULI+MADHYA+PRADESH+486886"
+              target="_blank" class="map-btn">
+              📍 View on Google Maps
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2023 MGR ALL IN ONE SERVICES. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Scale animation for service cards
+    document.querySelectorAll('.service-card').forEach(card => {
+      card.addEventListener('mouseenter', function () {
+        this.style.transform = 'scale(1.05)';
+        this.style.boxShadow = '0 20px 40px rgba(0,0,0,0.15)';
+        this.style.zIndex = '10';
+      });
+
+      card.addEventListener('mouseleave', function () {
+        this.style.transform = 'scale(1)';
+        this.style.boxShadow = '0 10px 25px rgba(0,0,0,0.1)';
+        this.style.zIndex = '1';
+      });
+
+      // For mobile touch devices
+      card.addEventListener('touchstart', function () {
+        this.style.transform = 'scale(1.03)';
+      });
+
+      card.addEventListener('touchend', function () {
+        this.style.transform = 'scale(1)';
+      });
+    });
+
+    // Add hover effect to why cards
+    document.querySelectorAll('.why-card').forEach(card => {
+      card.addEventListener('mouseenter', function () {
+        this.style.transform = 'translateY(-10px)';
+        this.style.boxShadow = '0 20px 40px rgba(10,102,255,0.15)';
+        this.style.borderColor = 'rgba(10,102,255,0.2)';
+      });
+
+      card.addEventListener('mouseleave', function () {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = '0 8px 25px rgba(0,0,0,0.05)';
+        this.style.borderColor = 'transparent';
+      });
+    });
+
+    // Add hover effect to stat items
+    document.querySelectorAll('.stat-item').forEach(item => {
+      item.addEventListener('mouseenter', function () {
+        this.style.background = 'rgba(255, 255, 255, 0.25)';
+        this.style.transform = 'translateY(-3px)';
+      });
+
+      item.addEventListener('mouseleave', function () {
+        this.style.background = 'rgba(255, 255, 255, 0.15)';
+        this.style.transform = 'translateY(0)';
+      });
+    });
+
+    // Add hover effect to contact items
+    document.querySelectorAll('.contact-item').forEach(item => {
+      item.addEventListener('mouseenter', function () {
+        this.style.transform = 'translateY(-3px)';
+        this.style.boxShadow = '0 8px 20px rgba(0,0,0,.2)';
+      });
+
+      item.addEventListener('mouseleave', function () {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = '0 4px 12px rgba(0,0,0,.1)';
+      });
+    });
+  </script>
+
+  <script>
+    const scrollBtn = document.getElementById("scrollTopBtn");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollBtn.style.display = "flex";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    });
+
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+
+  <script>
+    document.getElementById("bookServiceBtn").addEventListener("click", function () {
+      const appSection = document.querySelector(".our-app");
+
+      if (appSection) {
+        window.scrollTo({
+          top: appSection.offsetTop - 80,
+          behavior: "smooth"
+        });
+      }
+    });
+  </script>
+
+  <script>
+    const track = document.getElementById("carouselTrack");
+    const cards = Array.from(track.children);
+
+    let index = 0;
+    const gap = 32;
+    const interval = 2000;
+
+    function updateCarousel() {
+      const cardWidth = cards[0].offsetWidth;
+      const centerOffset = window.innerWidth / 2 - cardWidth / 2;
+
+      track.style.transform =
+        `translateX(-${index * (cardWidth + gap) - centerOffset}px)`;
+
+      cards.forEach(card => card.classList.remove("active"));
+      cards[index % cards.length].classList.add("active");
+    }
+
+    updateCarousel();
+
+    setInterval(() => {
+      index++;
+      if (index >= cards.length * 1000) index = 0; // prevents overflow
+      updateCarousel();
+    }, interval);
+
+    window.addEventListener("resize", updateCarousel);
+
+  </script>
+
+  <script>
+    const introWrapper = document.getElementById("intro-video-wrapper");
+    const desktopVideo = document.getElementById("introVideoDesktop");
+    const mobileVideo = document.getElementById("introVideoMobile");
+
+    const activeVideo =
+      window.innerWidth <= 768 ? mobileVideo : desktopVideo;
+
+    activeVideo.addEventListener("ended", endIntro);
+
+    /* SAFETY FALLBACK */
+    setTimeout(endIntro, 15000);
+
+    function endIntro() {
+      introWrapper.classList.add("fade-out");
+
+      setTimeout(() => {
+        introWrapper.style.display = "none";
+      }, 1000);
+    }
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const scrollBtn = document.getElementById("scrollTopBtn");
+
+      if (!scrollBtn) return;
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          scrollBtn.style.display = "flex";
+        } else {
+          scrollBtn.style.display = "none";
+        }
+      });
+
+      scrollBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+    });
+  </script>
+
+  <button id="scrollTopBtn" aria-label="Scroll to top">
+    <span class="arrow">↑</span>
+  </button>
+
+
+</body>
+
+</html>
